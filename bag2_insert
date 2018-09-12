@@ -1,0 +1,9 @@
+//this is for a dynamic bag class
+
+insert(const value_type& entry){
+  if(used == capacity)
+    reserve(used+1); //call to allocate more memory
+    
+  data[used] = entry; //insert at used
+  ++used;
+}
