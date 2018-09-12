@@ -1,0 +1,18 @@
+value_type *new_data;
+
+//check for self assignment
+if(this==&source)
+    return;
+    
+    
+    
+//if needed, allocate an array with different size
+if(capacity != source.capacity){
+  new_data = new value_type[source.capacity]
+  delete []data;
+  data = new_data;
+  capacity = source.capacity;
+}
+
+//copy the data from th source array
+used = source.used
