@@ -10,7 +10,7 @@ if(new_capacity == capactiy)
     
     larger_array = new value_type[new_capacity];
     copy(data, data+used, larger_array);
-    delete [] data;
-    data = larger_array;
-    capacity = new_capacity;
+    delete [] data; //no need for old block of memory, delete it
+    data = larger_array; //data needs to point to new memory block now, point data to the new memory block
+    capacity = new_capacity; //set capacity to new capacity
 }
