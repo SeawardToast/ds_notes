@@ -1,0 +1,16 @@
+reserve(){
+//this function is meant to allocate data for a bag during an insert or attach function
+value_type *larger_array;
+
+if(new_capacity == capactiy)
+  return; // not neccesary to allocate any more memory
+  
+  if(new_capacity < used)
+    new_capacity = used; //cannot allocate less than we are using
+    
+    larger_array = new value_type[new_capacity];
+    copy(data, data+used, larger_array);
+    delete [] data;
+    data = larger_array;
+    capacity = new_capacity;
+}
